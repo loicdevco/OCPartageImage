@@ -1,0 +1,5 @@
+<div class="partage-image-card" [ngClass]="{ snapped: buttonText === '😈 Bad 😈'}">
+    <h2>{{ partageImage.title | titlecase }}</h2>
+    <p> {{ partageImage.description }}</p>
+    <button (click)="onViewImage()">VIEW</button>
+</div>

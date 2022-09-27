@@ -1,0 +1,15 @@
+<div class="partage-image-card" [ngClass]="{ snapped: buttonText === '😈 Bad 😈'}">
+    <p>{{ 426578.54897 | number: '1.0-2' }}</p>
+    <p>{{ 0.3367 | percent: '1.0-1' }}</p>
+    <p>{{ 344.36 | currency: 'EUR' : 'code' }}</p>
+    <h2>{{ partageImage.title | titlecase }}</h2>
+    <button routerLink="/monPartage">BACK</button>
+    <p>Mis en ligne le {{ partageImage.dateCreation | date: 'd MMMM yyyy, à HH:mm'}} </p>
+    <img [src]="partageImage.imageUrl" [alt]="partageImage.title" />
+    <p> {{ partageImage.description }}</p>
+    <p *ngIf="partageImage.location">Logo créer à {{ partageImage.location }} </p>
+    <p>
+        <button (click)="onAddLike()">{{ buttonText }}</button>
+        <span [ngStyle]="{ color: 'rgb(0 ,' + partageImage.like * 15 + ', 0)'}">💖 {{ partageImage.like }} </span>
+    </p>
+</div>
