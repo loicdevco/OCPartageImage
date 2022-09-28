@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponentComponent } from './landing-page-component/landing-page-component.component';
 import { SimplePartageImageComponent } from './simple-partage-image/simple-partage-image.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewPartageImageComponent } from './new-partage-image/new-partage-image.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,14 @@ import { SimplePartageImageComponent } from './simple-partage-image/simple-parta
     PartageImageListComponent,
     HeaderComponent,
     LandingPageComponentComponent,
-    SimplePartageImageComponent
+    SimplePartageImageComponent,
+    NewPartageImageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' }

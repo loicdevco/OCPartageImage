@@ -1,4 +1,12 @@
 <div class="landing-block">
+    <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
+        <label for="emailInput"> Inscrivez vous pour recevoir notre newsletter !</label>
+        <input type="email" id="emailInput" ngModel name="userEmail">
+
+        <label for="telephoneInput">Entrer votre numéro de téléphone</label>
+        <input type="text" id="telephone" ngModel name="userPhone">
+        <button type="submit">OK!</button>
+    </form>
     <img src="../../assets/img/partage.webp" alt="Logo de partage d'images">
     <div class="landing-links">
         <button routerLink="monPartage">Continuer vers Snapface</button>
